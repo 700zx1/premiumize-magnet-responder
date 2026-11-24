@@ -1,0 +1,17 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Premiumize Magnet Responder</title>
+<style>
+  body { font: 14px system-ui, sans-serif; max-width: 460px; padding: 16px; }
+  input { width: 100%; box-sizing: border-box; padding: 6px; margin: 6px 0; }
+  small { color: #666; display: block; margin-bottom: 10px; }
+  #status { color: #2a7; margin-left: 8px; }
+</style></head>
+<body>
+  <h3>Premiumize API key</h3>
+  <input id="apiKey" type="password" autocomplete="off" placeholder="Paste your API key">
+  <small>premiumize.me → Account → API Keys. Stored locally in this Firefox profile (extension storage), not synced.</small>
+  <button id="save">Save</button><span id="status"></span>
+  <h3>Make Firefox use this for magnet links</h3>
+  <small>Firefox → Settings → General → Applications → search “magnet” → choose “Use Premiumize Magnet Handler”.</small>
+  <script src="options.js"></script>
+</body></html>

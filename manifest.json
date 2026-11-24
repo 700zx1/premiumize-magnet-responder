@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Premiumize Magnet Responder",
+  "version": "1.0.0",
+  "description": "Registers as the magnet: link handler in Firefox and sends magnets to your Premiumize.me cloud.",
+  "browser_specific_settings": {
+    "gecko": { "id": "premiumize-magnet-responder@example.local", "strict_min_version": "115.0" }
+  },
+  "permissions": ["storage", "notifications", "contextMenus"],
+  "host_permissions": ["https://www.premiumize.me/*"],
+  "background": { "scripts": ["background.js"] },
+  "protocol_handlers": [
+    { "protocol": "magnet", "name": "Premiumize Magnet Handler", "uriTemplate": "/handler/handler.html#%s" }
+  ],
+  "action": { "default_popup": "popup/popup.html", "default_title": "Premiumize Magnet Responder" },
+  "options_ui": { "page": "options/options.html", "open_in_tab": true }
+}
